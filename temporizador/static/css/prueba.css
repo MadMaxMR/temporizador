@@ -1,0 +1,1245 @@
+@font-face{font-family: dosis_b;src: url(../fuentes/dosis/Dosis-Bold.otf)}
+@font-face{font-family: dosis_sb;src: url(../fuentes/dosis/Dosis-SemiBold.otf)}
+@font-face{font-family: dosis_r;src: url(../fuentes/dosis/Dosis-Regular.otf)}
+@font-face{font-family: dosis_l;src: url(../fuentes/dosis/Dosis-Light.otf)}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  html, body{
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .titulo_sinsorteo{
+      width: 60%;
+      color: #6666FF;
+      font-size: 30px;
+      font-family: dosis_b;
+  }
+  #sinSorteo{
+      display: none;
+  }
+    .bg a.btn_registro{
+      text-decoration: none;
+  }
+  .selected{
+      background-color: #6666FF;
+      color: #fff;
+  }
+  @media (min-width: 1281px){
+        .bg{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            background: url(../img/banner/bg2.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            justify-content: center;
+            align-items: center;
+        }
+        .logotipo{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .logotipo img{
+            width: 50px;
+        }
+        .bg_b{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+        .bg_b1{
+            width: 50%;
+            height: 100%;
+            padding-left: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .titulo_a{
+            margin-bottom: 10px;
+            width: 300px;
+            text-align: center;
+            font-family: dosis_b;
+            font-size: 20px;
+            line-height: 40px;
+            color: #6666FF;
+        }
+        .info_b{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            font-family: dosis_r;
+        }
+        .subtitulo_b{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            font-family: dosis_l;
+            font-size: 18px;
+        }
+        .titulo_b{
+            margin-top: -10px;
+            width: 100%;
+            display: flex;
+            font-family: dosis_b;
+            font-size: 40px;
+            color: #6666FF;
+            align-items: baseline;
+            text-align: center;
+            justify-content: center;
+        }
+        .titulo_b :nth-child(2){
+            font-family: dosis_r;
+            font-size: 25px;
+        }
+        .informacion_b{
+            margin-top: 7px;
+            width: 100%;
+            text-align: justify;
+        }
+        .informacion_b span{
+            color: #FF0007;
+            font-family: dosis_b;
+        }
+        /* cambio botones net */
+        .buscar{
+            width: 400px;
+            display: flex;
+        }
+        .buscar .dom-net{
+            margin-top: 7px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #6666FF;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 5px;
+            font-family: dosis_r;
+            cursor: pointer;
+            user-select: none;
+        }
+        .buscar .dom-com{
+            margin-top: 7px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #6666FF;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 5px;
+            font-family: dosis_r;
+            cursor: pointer;
+            user-select: none;
+        }
+        .buscar input{
+            margin-top: 7px;
+            padding-left: 10px;
+            width: 300px;
+            height: 35px;
+            border-style: none;
+            border: 1px solid #6666FF;
+            border-radius: 5px;
+            background: none;
+        }
+        .buscar ::placeholder{
+            color: #000;
+            font-family: dosis_r;
+            font-size: 15px;
+        }
+        .alerta{
+            margin-top: 7px;
+            width: 300px;
+            display: none;
+            justify-content: center;
+            font-family: dosis_r;
+            color: #FF0007;
+        }
+        .disponible{
+            margin-top: 7px;
+            width: 300px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: dosis_r;
+            color: #6666FF;
+        }
+        .temporizador{
+            width: 300px;
+            height: 100px;
+            border-radius: 7px;
+            border-top: 1px solid #E0E007;
+            border-right: 1px solid #E0E007;
+            border-bottom: 1px solid #E0E007;
+            border-left: 1px solid #E0E007;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: dosis_b;
+            text-transform: uppercase;
+        }
+        .quedan{
+            display: flex;
+            margin-bottom: 7px;
+        }
+        .tiempo{
+            width: 240px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .marco_tiempo{
+            background: #E0E007;
+            width: 50px;
+            height: 50px;
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-transform: uppercase;
+            text-align: center;
+            color: #000;
+        }
+        .marco_tiempo :nth-child(1){
+            font-size: 20px;
+        }
+        .marco_tiempo :nth-child(2){
+            font-size: 10px;
+            font-family: dosis_r;
+        }
+        .boton{
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .boton button{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 135px;
+            height: 25px;
+            cursor: pointer;
+            color: #fff;
+            background: #6666FF;
+            border-radius: 5px;
+            border-style: none;
+        }
+        .boton button:hover{
+            background: #00FF00;
+            color: #000;
+        }
+        .redes{
+            width: 450px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .iconos{
+            width: 200px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .bg_b2{
+            width: 50%;
+            height: 100%;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .bgimg img{
+            width: 450px;
+        }
+        .bg_c{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            font-family: dosis_l;
+            font-size: 10px;
+        }
+        .footer :nth-child(2){
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .bg_c a{
+            text-decoration: none;
+            color: #6666FF;
+        }
+        .bg_c a:hover{
+            color: #FF0007;
+        }
+  }
+  @media (min-width: 1025px) and (max-width: 1280px){
+    .bg{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background: url(../img/banner/bg2.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+    }
+    .logotipo{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .logotipo img{
+        width: 50px;
+    }
+    .bg_b{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg_b1{
+        width: 50%;
+        height: 100%;
+        padding-left: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .titulo_a{
+        margin-bottom: 10px;
+        width: 260px;
+        text-align: center;
+        font-family: dosis_b;
+        font-size: 16px;
+        line-height: 30px;
+        color: #6666FF;
+    }
+    .info_b{
+        width: 260px;
+        display: flex;
+        flex-direction: column;
+        font-family: dosis_r;
+    }
+    .subtitulo_b{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-family: dosis_l;
+        font-size: 16px;
+    }
+    .titulo_b{
+        margin-top: -7px;
+        width: 100%;
+        display: flex;
+        font-family: dosis_b;
+        font-size: 35px;
+        color: #6666FF;
+        align-items: baseline;
+        text-align: center;
+        justify-content: center;
+    }
+    .titulo_b :nth-child(2){
+        font-family: dosis_r;
+        font-size: 20px;
+    }
+    .informacion_b{
+        margin-top: 7px;
+        width: 100%;
+        font-size: 14px;
+        text-align: justify;
+    }
+    .informacion_b span{
+        color: #FF0007;
+        font-family: dosis_b;
+    }
+    .buscar{
+        width: 260px;
+    }
+    .buscar input{
+        margin-top: 7px;
+        padding-left: 10px;
+        width: 100%;
+        height: 35px;
+        border-style: none;
+        border: 1px solid #6666FF;
+        border-radius: 5px;
+        background: none;
+    }
+    .buscar ::placeholder{
+        color: #000;
+        font-family: dosis_r;
+        font-size: 15px;
+    }
+    .alerta{
+        margin-top: 7px;
+        width: 260px;
+        display: none;
+        justify-content: center;
+        font-family: dosis_r;
+        color: #FF0007;
+    }
+    .disponible{
+        margin-top: 7px;
+        width: 260px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: dosis_r;
+        color: #6666FF;
+    }
+    .temporizador{
+        width: 260px;
+        height: 80px;
+        border-radius: 7px;
+        border-top: 1px solid #E0E007;
+        border-right: 1px solid #E0E007;
+        border-bottom: 1px solid #E0E007;
+        border-left: 1px solid #E0E007;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: dosis_b;
+        text-transform: uppercase;
+    }
+    .quedan{
+        display: flex;
+        margin-bottom: 3px;
+    }
+    .tiempo{
+        width: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .marco_tiempo{
+        background: #E0E007;
+        width: 40px;
+        height: 40px;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-transform: uppercase;
+        text-align: center;
+        color: #000;
+    }
+    .marco_tiempo :nth-child(1){
+        font-size: 18px;
+    }
+    .marco_tiempo :nth-child(2){
+        font-size: 8px;
+        font-family: dosis_r;
+    }
+    .boton{
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .boton button{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 135px;
+        height: 25px;
+        cursor: pointer;
+        color: #fff;
+        background: #6666FF;
+        border-radius: 5px;
+        border-style: none;
+    }
+    .boton button:hover{
+        background: #00FF00;
+        color: #000;
+    }
+    .redes{
+        width: 400px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .iconos{
+        width: 200px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .bg_b2{
+        width: 50%;
+        height: 100%;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .bgimg img{
+        width: 400px;
+    }
+    .bg_c{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-family: dosis_l;
+        font-size: 10px;
+    }
+    .footer :nth-child(2){
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .bg_c a{
+        text-decoration: none;
+        color: #6666FF;
+    }
+    .bg_c a:hover{
+        color: #FF0007;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    .bg{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background: url(../img/banner/bg2.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+    }
+    .logotipo{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .logotipo img{
+        width: 50px;
+    }
+    .bg_b{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg_b1{
+        width: 50%;
+        height: 100%;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .titulo_a{
+        margin-bottom: 10px;
+        width: 200px;
+        text-align: center;
+        font-family: dosis_b;
+        font-size: 14px;
+        line-height: 28px;
+        color: #6666FF;
+    }
+    .info_b{
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        font-family: dosis_r;
+    }
+    .subtitulo_b{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-family: dosis_l;
+        font-size: 16px;
+    }
+    .titulo_b{
+        margin-top: -7px;
+        width: 100%;
+        display: flex;
+        font-family: dosis_b;
+        font-size: 35px;
+        color: #6666FF;
+        align-items: baseline;
+        text-align: center;
+        justify-content: center;
+    }
+    .titulo_b :nth-child(2){
+        font-family: dosis_r;
+        font-size: 20px;
+    }
+    .informacion_b{
+        margin-top: 7px;
+        width: 100%;
+        font-size: 12px;
+        text-align: justify;
+    }
+    .informacion_b span{
+        color: #FF0007;
+        font-family: dosis_b;
+    }
+    .buscar{
+        width: 200px;
+    }
+    .buscar input{
+        margin-top: 7px;
+        padding-left: 10px;
+        width: 100%;
+        height: 35px;
+        border-style: none;
+        border: 1px solid #6666FF;
+        border-radius: 5px;
+        background: none;
+    }
+    .buscar ::placeholder{
+        color: #000;
+        font-family: dosis_r;
+        font-size: 13px;
+    }
+    .alerta{
+        margin-top: 7px;
+        width: 200px;
+        display: none;
+        justify-content: center;
+        font-family: dosis_r;
+        color: #FF0007;
+    }
+    .disponible{
+        margin-top: 7px;
+        width: 200px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: dosis_r;
+        color: #6666FF;
+    }
+    .temporizador{
+        width: 200px;
+        height: 60px;
+        border-radius: 7px;
+        border-top: 1px solid #E0E007;
+        border-right: 1px solid #E0E007;
+        border-bottom: 1px solid #E0E007;
+        border-left: 1px solid #E0E007;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: dosis_b;
+        text-transform: uppercase;
+    }
+    .quedan{
+        display: flex;
+        font-size: 13px;
+        margin-bottom: 1px;
+    }
+    .tiempo{
+        width: 160px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .marco_tiempo{
+        background: #E0E007;
+        width: 35px;
+        height: 35px;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-transform: uppercase;
+        text-align: center;
+        color: #000;
+    }
+    .marco_tiempo :nth-child(1){
+        font-size: 16px;
+    }
+    .marco_tiempo :nth-child(2){
+        font-size: 6px;
+        font-family: dosis_r;
+    }
+    .boton{
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .boton button{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 135px;
+        height: 25px;
+        cursor: pointer;
+        color: #fff;
+        background: #6666FF;
+        border-radius: 5px;
+        border-style: none;
+    }
+    .boton button:hover{
+        background: #00FF00;
+        color: #000;
+    }
+    .redes{
+        width: 350px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .iconos{
+        width: 140px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .redes img{
+        width: 20px;
+    }
+    .bg_b2{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .bgimg img{
+        width: 350px;
+    }
+    .bg_c{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-family: dosis_l;
+        font-size: 10px;
+    }
+    .footer :nth-child(2){
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .bg_c a{
+        text-decoration: none;
+        color: #6666FF;
+    }
+    .bg_c a:hover{
+        color: #FF0007;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px){
+    .bg{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background: url(../img/banner/bg3.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+    }
+    .logotipo{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .logotipo img{
+        width: 50px;
+    }
+    .bg_b{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg_b1{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: dosis_r;
+    }
+    .titulo_a{
+        margin-bottom: 2px;
+        width: 100%;
+        text-align: center;
+        font-family: dosis_b;
+        font-size: 12px;
+        color: #6666FF;
+    }
+    .info_b{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: dosis_r;
+        font-size: 13px;
+    }
+    .subtitulo_b{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: dosis_l;
+        font-size: 20px;
+    }
+    .titulo_b{
+        margin-top: -3px;
+        width: 100%;
+        display: flex;
+        font-family: dosis_b;
+        font-size: 35px;
+        color: #6666FF;
+        align-items: baseline;
+        text-align: center;
+        justify-content: center;
+    }
+    .titulo_b :nth-child(2){
+        font-family: dosis_r;
+        font-size: 20px;
+    }
+    .informacion_b{
+        margin-top: 7px;
+        width: 60%;
+        text-align: justify;
+        font-size: 14px;
+    }
+    .informacion_b span{
+        color: #FF0007;
+        font-family: dosis_b;
+    }
+    .buscar{
+        width: 300px;
+    }
+    .buscar input{
+        margin-top: 7px;
+        padding-left: 10px;
+        width: 100%;
+        height: 35px;
+        border-style: none;
+        border: 1px solid #6666FF;
+        border-radius: 5px;
+        background: none;
+    }
+    .buscar ::placeholder{
+        color: #000;
+        font-family: dosis_r;
+        font-size: 15px;
+    }
+    .alerta{
+        margin-top: 7px;
+        /*width: 60%;*/
+        width:300px;
+        display: none;
+        justify-content: center;
+        font-family: dosis_r;
+        color: #FF0007;
+    }
+    .disponible{
+        margin-top: 7px;
+        /*width: 60%;*/
+        width:300px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: dosis_r;
+        color: #6666FF;
+    }
+    .temporizador{
+        width: 220px;
+        height: 80px;
+        border-radius: 5px;
+        border-top: 1px solid #E0E007;
+        border-right: 1px solid #E0E007;
+        border-bottom: 1px solid #E0E007;
+        border-left: 1px solid #E0E007;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: dosis_b;
+        text-transform: uppercase;
+    }
+    .quedan{
+        display: flex;
+        font-size: 13px;
+        margin-bottom: 1px;
+    }
+    .tiempo{
+        width: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .marco_tiempo{
+        background: #E0E007;
+        width: 35px;
+        height: 35px;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-transform: uppercase;
+        text-align: center;
+        color: #000;
+    }
+    .marco_tiempo :nth-child(1){
+        font-size: 16px;
+    }
+    .marco_tiempo :nth-child(2){
+        font-size: 6px;
+        font-family: dosis_r;
+    }
+    .boton{
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .boton button{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 135px;
+        height: 25px;
+        cursor: pointer;
+        color: #fff;
+        background: #6666FF;
+        border-radius: 5px;
+        border-style: none;
+    }
+    .boton button:hover{
+        background: #00FF00;
+        color: #000;
+    }
+    .redes{
+        width: 200px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .iconos{
+        width: 140px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .redes img{
+        width: 20px;
+    }
+    .bg_b2{
+        display: none;
+    }
+    .bg_c{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-family: dosis_l;
+        font-size: 10px;
+    }
+    .footer :nth-child(2){
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .bg_c a{
+        text-decoration: none;
+        color: #6666FF;
+    }
+    .bg_c a:hover{
+        color: #FF0007;
+    }
+}
+@media (min-width: 320px) and (max-width: 480px){
+    .bg{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background: url(../img/banner/bg3.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+    }
+    .logotipo{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .logotipo img{
+        width: 50px;
+    }
+    .bg_b{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg_b1{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: dosis_r;
+    }
+    .titulo_a{
+        margin-bottom: 2px;
+        width: 100%;
+        text-align: center;
+        font-family: dosis_b;
+        font-size: 12px;
+        color: #6666FF;
+    }
+    .info_b{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: dosis_r;
+        font-size: 13px;
+    }
+    .subtitulo_b{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: dosis_l;
+        font-size: 20px;
+    }
+    .titulo_b{
+        margin-top: -3px;
+        width: 100%;
+        display: flex;
+        font-family: dosis_b;
+        font-size: 35px;
+        color: #6666FF;
+        align-items: baseline;
+        text-align: center;
+        justify-content: center;
+    }
+    .titulo_b :nth-child(2){
+        font-family: dosis_r;
+        font-size: 20px;
+    }
+    .informacion_b{
+        margin-top: 7px;
+        width: 60%;
+        text-align: justify;
+        font-size: 14px;
+    }
+    .informacion_b span{
+        color: #FF0007;
+        font-family: dosis_b;
+    }
+    .buscar{
+        width: 300px;
+    }
+    .buscar input{
+        margin-top: 7px;
+        padding-left: 10px;
+        width: 100%;
+        height: 35px;
+        border-style: none;
+        border: 1px solid #6666FF;
+        border-radius: 5px;
+        background: none;
+    }
+    .buscar ::placeholder{
+        color: #000;
+        font-family: dosis_r;
+        font-size: 15px;
+    }
+    .alerta{
+        margin-top: 7px;
+        /*width: 60%;*/
+        width:300px;
+        display: none;
+        justify-content: center;
+        font-family: dosis_r;
+        color: #FF0007;
+    }
+    .disponible{
+        margin-top: 7px;
+        /*width: 60%;*/
+        width:300px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: dosis_r;
+        color: #6666FF;
+    }
+    .temporizador{
+        width: 220px;
+        height: 80px;
+        border-radius: 5px;
+        border-top: 1px solid #E0E007;
+        border-right: 1px solid #E0E007;
+        border-bottom: 1px solid #E0E007;
+        border-left: 1px solid #E0E007;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: dosis_b;
+        text-transform: uppercase;
+    }
+    .quedan{
+        display: flex;
+        font-size: 13px;
+        margin-bottom: 1px;
+    }
+    .tiempo{
+        width: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .marco_tiempo{
+        background: #E0E007;
+        width: 35px;
+        height: 35px;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-transform: uppercase;
+        text-align: center;
+        color: #000;
+    }
+    .marco_tiempo :nth-child(1){
+        font-size: 16px;
+    }
+    .marco_tiempo :nth-child(2){
+        font-size: 6px;
+        font-family: dosis_r;
+    }
+    .boton{
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .boton button{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 135px;
+        height: 25px;
+        cursor: pointer;
+        color: #fff;
+        background: #6666FF;
+        border-radius: 5px;
+        border-style: none;
+    }
+    .boton button:hover{
+        background: #00FF00;
+        color: #000;
+    }
+    .redes{
+        width: 200px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .iconos{
+        width: 140px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .redes img{
+        width: 20px;
+    }
+    .bg_b2{
+        display: none;
+    }
+    .bg_c{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-family: dosis_l;
+        font-size: 10px;
+    }
+    .footer :nth-child(2){
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .bg_c a{
+        text-decoration: none;
+        color: #6666FF;
+    }
+    .bg_c a:hover{
+        color: #FF0007;
+    }
+}

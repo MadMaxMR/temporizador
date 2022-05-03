@@ -14,4 +14,5 @@ class Timer(models.Model):
         db_table = 'timer'
         verbose_name = 'Timer'
         verbose_name_plural = 'Timers'
-        
+
+
