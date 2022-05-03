@@ -39,7 +39,7 @@ function showTimer() {
 
 	let interval = setInterval(() => {
 		try {
-			ajaxSucessFunction({ data }, "http://127.0.0.1:8000/timer/", successFn)
+			ajaxSucessFunction({ data }, "../timer/", successFn)
 		} catch (e) {
 
 
